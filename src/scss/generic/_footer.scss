@@ -1,0 +1,40 @@
+.footer {
+  padding: 10px;
+  @extend %flexCenter;;
+  flex-direction: column;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .social-media {
+    display: flex;
+
+    &-item {
+      list-style: none;
+      margin: 35px 10px;
+    }
+
+    &-link {
+      color: $color-secondary;
+      font-size: 40px;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &-copyright-desc {
+    color: $color-white;
+    font-family: $font-danceScript;
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 20px;
+    // background-color: $color-white;
+    // border-radius: 20px;
+    // padding: 20px 250px;
+  }
+}

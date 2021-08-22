@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:ital,wght@0,300;0,400;1,200;1,300&family=Nunito:wght@200;300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:ital,wght@0,300;0,400;1,200;1,300&family=Nunito:wght@200;300;600&display=swap");
+.hamburger-menu .menu, .card-overlay, .card img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-navigation .nav-list-item, .card-overlay-heading, .card-overlay-desc, .main-title, .sub-title {
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.navbar-navigation-left, .footer, .logo, .card-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  position: relative;
+  z-index: 200;
+}
+
+.navbar .checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  left: 0;
+}
+
+.navbar .checkbox:checked ~ .navbar-navigation {
+  right: 0;
+}
+
+.navbar .checkbox:checked ~ .hamburger-menu .menu {
+  transform: rotateZ(90deg);
+}
+
+.navbar .checkbox:checked ~ .hamburger-menu .line-1 {
+  transform: rotateZ(40deg);
+}
+
+.navbar .checkbox:checked ~ .hamburger-menu .line-2 {
+  opacity: 0;
+}
+
+.navbar .checkbox:checked ~ .hamburger-menu .line-3 {
+  transform: rotateZ(-40deg);
+}
+
+.navbar-navigation {
+  display: flex;
+}
+
+.navbar-navigation-left {
+  width: 50vw;
+  height: 100vh;
+  background-color: #262626;
+  position: fixed;
+  left: -50vw;
+  transition: left 1s cubic-bezier(1, 0, 0, 1);
+}
+
+@media (max-width: 1100px) {
+  .navbar-navigation-left {
+    width: 100vw;
+    left: -100vw;
+    opacity: .95;
+  }
+}
+
+.navbar-navigation .nav-list-item {
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 40px;
+  margin: 20px;
+}
+
+.navbar-navigation .nav-list-link {
+  color: #bbb;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.navbar-navigation .nav-list-link:hover {
+  color: #b7a71b;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("../img/background.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.header .brand {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+
+.header-banner {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.post {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.post-left {
+  flex: 1;
+  padding: 15px;
+}
+
+.post-left img {
+  width: 100%;
+  opacity: 0.7;
+}
+
+.post-right {
+  flex: 1.7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.post-right .desc {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.post-right .desc::first-line {
+  margin-left: 20px;
+}
+
+@media (max-width: 1600px) {
+  .post-right .desc {
+    font-size: 20px;
+  }
+}
+
+.post-right .main-heading {
+  font-size: 80px;
+  text-align: center;
+}
+
+.post-right .sub-heading {
+  color: #fff;
+  font-style: 60px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.post-right .stars {
+  margin: 30px 0;
+}
+
+.post-right .star {
+  color: #b7a71b;
+  margin-left: 10px;
+}
+
+@media (max-width: 500px) {
+  .post {
+    display: block;
+  }
+}
+
+.gallery .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer {
+  padding: 10px;
+  flex-direction: column;
+}
+
+.footer-header {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.footer .social-media {
+  display: flex;
+}
+
+.footer .social-media-item {
+  list-style: none;
+  margin: 35px 10px;
+}
+
+.footer .social-media-link {
+  color: #bbb;
+  font-size: 40px;
+}
+
+.footer .social-media-link:hover {
+  color: #b7a71b;
+}
+
+.footer-copyright-desc {
+  color: #fff;
+  font-family: "Dancing Script", cursive;
+  font-weight: 800;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 70px;
+  color: #b7a71b;
+  width: 110px;
+  margin-right: 20px;
+  height: 110px;
+  border: 3px solid #b7a71b;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.hamburger-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  z-index: 300;
+}
+
+.hamburger-menu .menu {
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.hamburger-menu .menu-line {
+  width: 100%;
+  height: 4px;
+  background-color: #b7a71b;
+  transform-origin: left;
+}
+
+.card {
+  width: 30%;
+  margin: 20px auto;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover > .card-overlay {
+  left: 0;
+}
+
+.card-overlay {
+  flex-direction: column;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  color: #fff;
+  background-color: rgba(183, 167, 27, 0.7);
+  z-index: 1;
+  transition: 0.5s left;
+}
+
+.card-overlay-heading {
+  font-family: "Nunito", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  color: #fff;
+}
+
+@media (max-width: 1085px) {
+  .card-overlay-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1085px) {
+  .card-overlay-heading {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-overlay-heading {
+    font-size: 20px;
+  }
+}
+
+.card-overlay-desc {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+}
+
+@media (max-width: 1085px) {
+  .card-overlay-desc {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card-overlay-desc {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-overlay-desc {
+    font-size: 15px;
+  }
+}
+
+.card-overlay-btn {
+  width: 150px;
+  height: 40px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #262626;
+  background-color: #fff;
+  border: 1px solid #b7a71b;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.card-overlay-btn:hover {
+  background-color: #262626;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+@media (max-width: 1085px) {
+  .card-overlay-btn {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card-overlay-btn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 756px) {
+  .card-overlay-btn {
+    width: 100px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-overlay-btn {
+    margin-top: 20px;
+    width: 100px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 560px) {
+  .card-overlay-btn {
+    width: 70px;
+  }
+}
+
+.card img {
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.btn {
+  width: 170px;
+  height: 45px;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  color: #b7a71b;
+  background-color: transparent;
+  border: 1px solid #b7a71b;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #b7a71b;
+  color: #262626;
+}
+
+.main-title {
+  font-family: "Nunito", sans-serif;
+  font-size: 50px;
+  font-weight: normal;
+  color: #bbb;
+}
+
+@media (max-width: 900px) {
+  .main-title {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+}
+
+.sub-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #bbb;
+}
+
+.main-heading {
+  font-family: "Dancing Script", cursive;
+  font-size: 100px;
+  font-weight: normal;
+  color: #b7a71b;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1100px) {
+  .main-heading {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 586px) {
+  .main-heading {
+    font-size: 10px;
+    margin-top: 100px;
+  }
+}
+
+.sub-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+  color: #bbb;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1600px) {
+  .sub-heading {
+    font-size: 45px;
+    margin-bottom: 30px;
+  }
+}
+
+.hamburger-menu .menu, .card-overlay, .card img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-navigation .nav-list-item, .card-overlay-heading, .card-overlay-desc, .main-title, .sub-title {
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.navbar-navigation-left, .footer, .logo, .card-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  background-color: #262626;
+}
+/*# sourceMappingURL=main.css.map */

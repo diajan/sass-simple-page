@@ -1,0 +1,72 @@
+@import "../constant";
+
+.navbar {
+    position: relative;
+    z-index: 200;
+
+    // side left  --> pic
+    .checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+        left: 0;
+    }
+
+    // side right --> menu
+    .checkbox:checked ~ .navbar-navigation {
+        right: 0;
+    }
+
+    // burger menu
+    .checkbox:checked ~ .hamburger-menu .menu {
+        transform: rotateZ(90deg);
+    }
+
+    .checkbox:checked ~ .hamburger-menu .line-1 {
+        transform: rotateZ(40deg);
+    }
+
+    .checkbox:checked ~ .hamburger-menu .line-2 {
+        opacity: 0;
+    }
+
+    .checkbox:checked ~ .hamburger-menu .line-3 {
+        transform: rotateZ(-40deg);
+    }
+    // end burger menu
+
+    &-navigation {
+        display: flex;
+
+        &-left {
+            width: 50vw;
+            height: 100vh;
+            background-color: $color-dark;
+            position: fixed;
+            left: -50vw;
+            @extend %flexCenter;
+            transition: left 1s cubic-bezier(1, 0, 0, 1);
+
+            @media (max-width: 1100px) {
+                width: 100vw;
+                left: -100vw;
+                opacity: .95;
+            }
+        }
+
+        .nav-list {
+            &-item {
+                @extend %textStyle;
+                list-style: none;
+                font-family: $font-josefinSans;
+                font-size: 40px;
+                margin: 20px;
+            }
+            &-link {
+                color: $color-secondary;
+                text-decoration: none;
+                transition: all 0.5s;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}

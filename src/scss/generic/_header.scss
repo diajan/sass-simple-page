@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(rgba($color-black, 0.8), rgba($color-black, 0.4)), url("../img/background.jpg") center no-repeat;
+  background-size: cover;
+
+  .brand {
+    @include useCenter(15%);
+    display: flex;
+    align-items: center;
+  }
+
+  &-banner {
+    text-align: center;
+    @include useCenter(50%);
+  }
+}

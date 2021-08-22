@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:ital,wght@0,300;0,400;1,200;1,300&family=Nunito:wght@200;300;600&display=swap");
+
+$color-dark: #262626;
+$color-black: #000;
+$color-secondary: #bbb;
+$color-primary: #b7a71b;
+$color-white: #d4d4d4;
+$color-white: #fff;
+
+$font-danceScript: "Dancing Script", cursive;
+$font-josefinSans: "Josefin Sans", sans-serif;
+$font-nunito: "Nunito", sans-serif;
+
+@mixin useCenter($top:0) {
+  position: absolute;
+  top: $top;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin hoverBtn($first-color, $second-color, $time) {
+  background-color: $first-color;
+  color: $second-color;
+  transition: all $time;
+}
+
+@mixin fontStyle($font:sans-serif,$size:normal,$color:white,$font-weight:normal) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+%fullWidthHieght {
+  width: 100%;
+  height: 100%;
+}
+
+%textStyle {
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+%flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

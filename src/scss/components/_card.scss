@@ -1,0 +1,94 @@
+.card {
+  width: 30%;
+  margin: 20px auto;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+
+  &:hover > &-overlay {
+    left: 0;
+  }
+
+  &-overlay {
+    @extend %fullWidthHieght;
+    @extend %flexCenter;
+    flex-direction: column;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    color: $color-white;
+    background-color: rgba($color: $color-primary, $alpha: 0.7);
+    z-index: 1;
+    transition: 0.5s left;
+
+    &-heading {
+      @extend %textStyle;
+      @include fontStyle($font-nunito, 50px, $color-white, 800);
+
+      @media (max-width: 1085px) {
+        font-size: 40px;
+      }
+      @media (max-width: 1085px) {
+        font-size: 30px;
+      }
+      @media (max-width: 640px) {
+        font-size: 20px;
+      }
+    }
+    &-desc {
+      font-family: $font-danceScript;
+      font-size: 30px;
+      @extend %textStyle;
+
+      @media (max-width: 1085px) {
+        font-size: 25px;
+      }
+      @media (max-width: 900px) {
+        font-size: 20px;
+      }
+      @media (max-width: 640px) {
+        font-size: 15px;
+      }
+    }
+
+    &-btn {
+      width: 150px;
+      height: 40px;
+      @include fontStyle($font-nunito, 18px, $color-dark);
+      background-color: $color-white;
+      border: 1px solid $color_primary;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 50px;
+
+      &:hover {
+        @include hoverBtn($color-dark, $color-white, 0.5s);
+      }
+
+      @media (max-width: 1085px) {
+        font-size: 15px;
+      }
+      @media (max-width: 900px) {
+        font-size: 12px;
+      }
+      @media (max-width: 756px) {
+        width: 100px;
+        margin-top: 20px;
+      }
+      @media (max-width: 640px) {
+        margin-top: 20px;
+        width: 100px;
+        font-weight: 600;
+      }
+      @media (max-width: 560px) {
+        width: 70px;
+      }
+    }
+  }
+
+  img {
+    @extend %fullWidthHieght;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+}

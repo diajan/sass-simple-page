@@ -1,0 +1,48 @@
+@import "./components/logo";
+@import "./components/hamburger-menu";
+@import "./components/card";
+@import "./components/button";
+
+.main-title {
+    @include fontStyle($font-nunito, 50px, $color-secondary);
+    @extend %textStyle;
+    
+    @media (max-width:900px) {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+}
+
+.sub-title {
+    @include fontStyle($font-josefinSans, 18px, $color-secondary);
+    @extend %textStyle;
+}
+
+.main-heading {
+    @include fontStyle($font-danceScript, 100px, $color-primary);
+    font-weight: 300;
+    margin-bottom: 40px;
+
+    @media (max-width:1100px) {
+        font-size: 60px;
+    }
+    @media (max-width:900px) {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    @media (max-width:586px) {
+        font-size: 10px;
+        margin-top: 100px;
+    }
+}
+
+.sub-heading {
+    @include fontStyle($font-josefinSans, 60px, $color-secondary);
+    font-weight: 300;
+    margin-bottom: 40px;
+
+    @media (max-width:1600px) {
+        font-size: 45px;
+        margin-bottom: 30px;
+    }
+}
